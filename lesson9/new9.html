@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        margin: 0;
+    }
+    .container {
+        border: 1px solid grey;
+        height: 500px;
+        display: flex;
+        flex-direction:row;/*изменение направления главной оси flex*/
+        /*Выстраивание элементов по главной оси*/
+        justify-content: space-around;/*center, flex-start, flex-end, space=between
+                                        space-around, space-evently*/
+        align-items: center;/*flex-start, flex-end, center, stretch*/
+        flex-wrap: wrap;/*Разршить перенос слова*/
+        /*для прозрачности опасити*/
+    }
+    .container>div {
+        height: 100px;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container>div:nth-child(1) {
+        background-color: #ffc0cb;
+        align-self: flex-start;
+    }
+    .container>div:nth-child(2) {
+        background-color: gold;
+        height: 200px;
+        order:4;
+    }
+    .container>div:nth-child(3) {
+        background-color: purple;
+        position: relative;
+        top: -90px;     
+
+    }
+    .container>div:nth-child(4) {
+       background-color: rgba(123, 0, 255, 8.5); /*прозрачность последнее*/
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+</body>
+</html>
